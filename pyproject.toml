@@ -30,6 +30,7 @@ dev = [
     'sphinx',
     'sphinx-autodoc-typehints',
     'sphinxcontrib-relativeinclude',
+    'sphinxcontrib-svg2pdfconverter[CairoSVG]',
 ]
 
 [project.urls]

@@ -41,6 +41,7 @@ extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.autosummary",
     "sphinx_autodoc_typehints",
+    "sphinxcontrib.cairosvgconverter",
     "sphinxcontrib.relativeinclude",
 ]
 
