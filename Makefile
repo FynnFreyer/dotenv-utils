@@ -96,6 +96,9 @@ format: logs  ## Do code formatting with isort and autopep8.
 lint: logs  ## Lint the project with ruff.
 	python3 -m ruff check --fix $(CHECK_DIRS) 2>&1 | tee logs/ruff.log
 
+test: logs  ## Run tests with coverage.
+	python3 -m pytest --cov $(CHECK_DIRS) 2>&1 | tee logs/pytest.log
+
 type-check: logs  ## Run static type checking with mypy.
 	python3 -m mypy $(CHECK_DIRS) 2>&1 | tee logs/mypy.log
 
