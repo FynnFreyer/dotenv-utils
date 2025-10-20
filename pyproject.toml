@@ -36,9 +36,6 @@ dev = [
 requires = ['hatchling']
 build-backend = 'hatchling.build'
 
-[tool.hatch.build]
-packages = ['dotenv-utils']
-
 # Dynamic meta-data sources
 [tool.hatch]
 description = { path = 'dotenv_utils/__about__.py' }
