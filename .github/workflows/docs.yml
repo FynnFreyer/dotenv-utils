@@ -59,7 +59,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: ${{ runner.temp }}/docs.tgz
+          path: ${{ runner.temp }}
 
   deploy-gh-pages:
     name: Publish docs to GH-Pages
