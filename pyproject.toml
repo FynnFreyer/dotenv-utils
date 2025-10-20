@@ -76,3 +76,10 @@ testpaths = 'tst/'
 [tool.coverage.run]
 branch = true
 omit = ['dotenv_utils/__about__.py']
+
+[tool.coverage.report]
+fail_under = 75
+skip_empty = true
+exclude_lines = [
+    'if __name__ == .__main__.:',
+]
