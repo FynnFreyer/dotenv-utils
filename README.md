@@ -1,8 +1,8 @@
 # dotenv-utils
 
-[![Release Status](https://github.com/FynnFreyer/dotenv-utils/actions/workflows/build.yml/badge.svg)](https://github.com/FynnFreyer/dotenv-utils/actions/workflows/build.yml)
+[![Release Status](https://github.com/FynnFreyer/dotenv-utils/actions/workflows/build.yml/badge.svg)](https://pypi.org/project/dotenv-utils)
 [![Doc Status](https://github.com/FynnFreyer/dotenv-utils/actions/workflows/docs.yml/badge.svg)][docs]
-[![Test Status](https://github.com/FynnFreyer/dotenv-utils/actions/workflows/tests.yml/badge.svg)](https://github.com/FynnFreyer/dotenv-utils/actions/workflows/tests.yml)
+[![Test Status](https://github.com/FynnFreyer/dotenv-utils/actions/workflows/tests.yml/badge.svg)](https://codecov.io/gh/FynnFreyer/dotenv-utils/tests)
 [![Coverage Status](https://codecov.io/gh/FynnFreyer/dotenv-utils/branch/main/graph/badge.svg)](https://codecov.io/gh/FynnFreyer/dotenv-utils)
 
 A tiny, self-contained package for parsing environment variables.
