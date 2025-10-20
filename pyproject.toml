@@ -64,4 +64,4 @@ show-fixes = true
 [tool.ruff.lint]
 select = ['E', 'F', 'B', 'Q']
 ignore = ['B905']
-mccabe = {max-complexity = 5}
+mccabe = { max-complexity = 5 }
