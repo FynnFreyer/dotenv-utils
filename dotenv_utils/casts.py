@@ -37,7 +37,8 @@ def str2bool(value: str) -> bool:
     elif value in falsy_values:
         return False
     else:
-        raise ValueError(f'Invalid boolean value for "{value}". Expected "true", "false", "1", "0", "yes", or "no".')
+        raise ValueError(f'Invalid boolean value for "{value}". '
+                         f'Expected one of: {", ".join(truthy_values)} or {", ".join(falsy_values)}.')
 
 
 str2date = date.fromisoformat
