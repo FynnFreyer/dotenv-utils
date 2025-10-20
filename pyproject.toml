@@ -1,12 +1,9 @@
 [project]
 name = 'dotenv-utils'
 readme = 'README.md'
-description = 'A tiny, self-contained package to parse environment variables.'
 requires-python = '>=3.9'
-version = '0.1.0.beta'
-authors = [
-    { name = 'Fynn Freyer', email = 'fynn@fynns.site' },
-]
+dynamic = ['description', 'version', 'authors', 'maintainers']
+
 license = "MIT"
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -37,6 +34,13 @@ build-backend = 'hatchling.build'
 
 [tool.hatch.build]
 packages = ['dotenv-utils']
+
+# Dynamic meta-data sources
+[tool.hatch]
+description = { path = 'dotenv_utils/__about__.py' }
+version = { path = 'dotenv_utils/__about__.py' }
+authors = { path = 'dotenv_utils/__about__.py' }
+maintainers = { path = 'dotenv_utils/__about__.py' }
 
 # Formatting options
 [tool.autopep8]
