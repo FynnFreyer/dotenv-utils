@@ -3,7 +3,7 @@ This module contains the project meta-data.
 """
 
 __description__ = "A tiny, self-contained package to parse environment variables."
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 __authors__ = [
     {"name": "Fynn Freyer", "email": "fynn@fynns.site"},
 ]
