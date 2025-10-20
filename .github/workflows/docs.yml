@@ -23,6 +23,9 @@ jobs:
           python-version: "3.x"
       - name: Install deps
         run: |
+          python -m venv venv
+          source venv/bin/activate
+
           python -m pip install .[dev]
           sudo apt update
           sudo apt install -y latexmk texlive-fonts-recommended texlive-latex-extra texlive-pictures
