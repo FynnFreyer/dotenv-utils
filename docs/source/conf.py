@@ -53,7 +53,7 @@ language = "en"
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-latex-output
 
-html_theme = "classic"
+html_theme = "alabaster"
 html_static_path = ["static"]
 
 latex_documents = [

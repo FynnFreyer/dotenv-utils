@@ -7,7 +7,7 @@ logs/
 
 # documentation
 docs/build/
-docs/source/_generated/
+docs/source/modules/
 
 ### Python template
 # Byte-compiled / optimized / DLL files

@@ -14,7 +14,7 @@ Module Documentation
 Here you can find the module documentation of the |release| release for |project|.
 
 .. autosummary::
-   :toctree: _generated
+   :toctree: modules
    :recursive:
 
    dotenv_utils
