@@ -58,7 +58,7 @@ jobs:
         with:
           path: ${{ runner.temp }}
 
-  deploy-gh-pages:
+  publish:
     name: Publish docs to GH-Pages
 
     needs: build
