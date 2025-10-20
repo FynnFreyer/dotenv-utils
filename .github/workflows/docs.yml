@@ -36,17 +36,21 @@ jobs:
           source venv/bin/activate
           make docs
           
+          # set vars for output dirs
+          DOCS_OUT="docs/build"
+          DOCS_HTML="$DOCS_OUT/dirhtml"
+          
           # create empty dir in HTML docs site
-          mkdir -p docs/build/dirhtml/files/
+          mkdir -p "$DOCS_HTML/files/"
           # move other formats into the HTML docs
           mv \
-            docs/build/pdf/*.pdf \
-            docs/build/epub/*.epub \
-            docs/build/dirhtml/files/
+            "$DOCS_OUT"/pdf/*.pdf \
+            "$DOCS_OUT"/epub/*.epub \
+            "$DOCS_HTML"/files/
           # pack everything up for further distribution
           tar \
             --dereference --hard-dereference \
-            --directory docs/_build/html \
+            --directory "$DOCS_HTML" \
             -czvf "$RUNNER_TEMP/docs.tgz" \
             .
       - name: Upload docs
