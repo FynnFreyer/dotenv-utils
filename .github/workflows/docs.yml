@@ -3,6 +3,7 @@ on:
   push:
     tags:
       - 'v*.*.*'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -64,6 +65,7 @@ jobs:
     name: Publish docs to GH-Pages
 
     needs: build
+    # if: startsWith(github.ref, 'refs/tags/')
     permissions:
       contents: read
       pages: write
