@@ -41,5 +41,6 @@ def str2bool(value: str) -> bool:
                          f'Expected one of: {", ".join(truthy_values)} or {", ".join(falsy_values)}.')
 
 
-str2date = date.fromisoformat
-"""This is just an alias for ``datetime.date.fromisoformat``."""
+def str2date(value: str) -> date:
+    """This is just an alias for ``datetime.date.fromisoformat``."""
+    return date.fromisoformat(value)
