@@ -88,7 +88,7 @@ logs:
 
 CHECK_DIRS = dotenv_utils/
 
-.PHONY: format lint lint-quick test type-check chores
+.PHONY: format lint test type-check chores
 format: logs  ## Do code formatting with isort and autopep8.
 	python3 -m isort $(CHECK_DIRS) 2>&1 | tee logs/isort.log
 	python3 -m autopep8 -v $(CHECK_DIRS) 2>&1 | tee logs/autopep8.log
