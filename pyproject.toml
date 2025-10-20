@@ -32,6 +32,7 @@ dev = [
 [project.urls]
 "Repository" = "https://github.com/FynnFreyer/dotenv-utils"
 "Issues" = "https://github.com/FynnFreyer/dotenv-utils/issues"
+"Docs" = "https://fynnfreyer.github.io/dotenv-utils/"
 
 [build-system]
 requires = ['hatchling']
