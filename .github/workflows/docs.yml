@@ -1,8 +1,6 @@
 name: Publish Documentation
 on:
   push:
-    branches:
-      - main
     tags:
       - 'v*.*.*'
 
@@ -53,13 +51,14 @@ jobs:
             --directory "$DOCS_HTML" \
             -czvf "$RUNNER_TEMP/docs.tgz" \
             .
-      - name: Upload docs
-        uses: actions/upload-artifact@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          name: github-pages
           path: ${{ runner.temp }}/docs.tgz
-          retention-days: 1
-          if-no-files-found: error
 
   deploy-gh-pages:
     name: Publish docs to GH-Pages
@@ -74,13 +73,10 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
 
-    # only publish new docs on tag pushes
-    # if: startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
       - name: Deploy to Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
+        with:
+          verbose: true
