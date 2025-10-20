@@ -109,7 +109,7 @@ chores: format lint test type-check  ## Format, lint, test and type check the re
 ## Generating Artifacts
 ##
 
-DOC_FORMATS = latexpdf epub dirhtml singlehtml man info
+DOC_FORMATS = latexpdf epub dirhtml man
 .PHONY: docs
 docs: logs ## Generate PDF documentation.
 	@rm -r docs/build || true
