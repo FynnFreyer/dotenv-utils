@@ -46,12 +46,9 @@ jobs:
             "$DOCS_OUT"/pdf/*.pdf \
             "$DOCS_OUT"/epub/*.epub \
             "$DOCS_HTML"/files/
-          # pack everything up for further distribution
-          tar \
-            --dereference --hard-dereference \
-            --directory "$DOCS_HTML" \
-            -czvf "$RUNNER_TEMP/docs.tgz" \
-            .
+
+          # move docs to tmp dir
+          mv "$DOCS_HTML"/* "$RUNNER_TEMP"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
