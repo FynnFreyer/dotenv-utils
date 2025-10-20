@@ -72,3 +72,7 @@ mccabe = { max-complexity = 5 }
 [tool.pytest.ini_options]
 pythonpath = '.'
 testpaths = 'tst/'
+
+[tool.coverage.run]
+branch = true
+omit = ['dotenv_utils/__about__.py']
