@@ -90,14 +90,14 @@ CHECK_DIRS = dotenv_utils/
 
 .PHONY: format lint lint-quick test type-check chores
 format: logs  ## Do code formatting with isort and autopep8.
-	python3 -m isort $(CHECK_DIRS) | tee logs/isort.log
-	python3 -m autopep8 -v $(CHECK_DIRS) | tee logs/autopep8.log
+	python3 -m isort $(CHECK_DIRS) 2>&1 | tee logs/isort.log
+	python3 -m autopep8 -v $(CHECK_DIRS) 2>&1 | tee logs/autopep8.log
 
 lint: logs  ## Lint the project with ruff.
-	python3 -m ruff check --fix $(CHECK_DIRS) | tee logs/ruff.log
+	python3 -m ruff check --fix $(CHECK_DIRS) 2>&1 | tee logs/ruff.log
 
 type-check: logs  ## Run static type checking with mypy.
-	python3 -m mypy $(CHECK_DIRS) | tee logs/mypy.log
+	python3 -m mypy $(CHECK_DIRS) 2>&1 | tee logs/mypy.log
 
 chores: format lint test type-check  ## Format, lint, test and type check the repository.
 
