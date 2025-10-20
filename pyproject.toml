@@ -21,7 +21,11 @@ dev = [
     'autopep8',
     'isort',
     'mypy',
+    'myst-parser',
     'ruff',
+    'sphinx',
+    'sphinx-autodoc-typehints',
+    'sphinxcontrib-relativeinclude',
 ]
 
 [project.urls]

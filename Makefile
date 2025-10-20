@@ -100,3 +100,21 @@ type-check: logs  ## Run static type checking with mypy.
 	python3 -m mypy $(CHECK_DIRS) | tee logs/mypy.log
 
 chores: format lint test type-check  ## Format, lint, test and type check the repository.
+
+##
+##
+## Generating Artifacts
+##
+
+DOC_FORMATS = latexpdf epub dirhtml singlehtml man info
+.PHONY: docs
+docs: logs ## Generate PDF documentation.
+	@rm -r docs/build || true
+	@rm -r docs/source/_generated || true
+	mkdir -p logs/docs
+	for fmt in $(DOC_FORMATS); do \
+	    $(MAKE) -C docs "$$fmt" 2>&1 | tee "logs/docs/$$fmt.log"; \
+	done
+	# move compiled pdfs to dedicated dir
+	mkdir -p docs/build/pdf
+	mv docs/build/latex/*.pdf docs/build/pdf

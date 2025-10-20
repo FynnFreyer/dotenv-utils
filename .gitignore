@@ -5,6 +5,10 @@
 # log files from chores
 logs/
 
+# documentation
+docs/build/
+docs/source/_generated/
+
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
